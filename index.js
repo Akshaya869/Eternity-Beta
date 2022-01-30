@@ -2,7 +2,7 @@ const Aoijs = require("aoi.js");
 
 const bot = new Aoijs.Bot({
   mobile: false, // you can change it to "true" if you want a mobile status
-  token: "OTM3MzMxMzYxMzA2NTI1NzQ2.YfaL2w.mqNLWO1tQGspC2ForXPlRWvzcVg", // change TOKEN with your bot token
+  token: "OTMwNjg1MzMyNTcwMTMyNTIx.Yd5eQg.6eugKexOUNZrDWGvGjdsMeomhaI", // change TOKEN with your bot token
   prefix: ["$getServerVar[prefix]", "<@!$clientID>", "<@$clientID>"]
 });
 
@@ -11,7 +11,7 @@ bot.onMessage({
 });
 
 bot.status({
-  text: `e+help | $serverCount Servers`, // put any text
+  text: `e?help | $serverCount Servers`, // put any text
   type: "LISTENING", // LISTENING, PLAYING, WATCHING, COMPETING
   status: "online", // online, dnd, idle, invisible
   time: 75 // amount of times where you can change the bot status (if have multiple statuses)
@@ -90,7 +90,7 @@ bot.command({
  })
 
 bot.variables({
-  prefix: "e+",
+  prefix: "e?",
   Money: "0",
   Bank: "0",
   Phone: "0",
