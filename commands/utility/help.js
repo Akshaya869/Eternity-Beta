@@ -10,6 +10,12 @@ module.exports = {
 **$customEmoji[Mod]Moderation**
 \`ban,giverole,kick,mute,nuke,purge,removerole,setmute,tempmute,temprole,unban,unmute\`
 
+**$customemoji[Musique]Music**
+\`247,clear,forward,join,leave,loop,loopall,nowplaying,pause,play,queue,replay,resume,rewind,search,seek,shuffle,skip,skipto,volume\`
+
+**$customemoji[filters]Filters (Music Filters)**
+\`3d,bass,china,chipmunk,dance,darthvader,doubletime,earrape,equalizer,nightcore,pitch,pop,rate,reset,slowmotion,soft,speed,superbass,treblebass,tremolo,vaporwave,vibrate,vibrato\`
+
 **$customEmoji[info]Information**
 \`botinfo,channelinfo,devinfo,guildinfo,roleinfo,userinfo\`
 
