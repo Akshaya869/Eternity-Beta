@@ -2,7 +2,7 @@ const Aoijs = require("aoi.js");
 
 const bot = new Aoijs.Bot({
   mobile: false, // you can change it to "true" if you want a mobile status
-  token: "OTM3MzMxMzYxMzA2NTI1NzQ2.YfaL2w.mqNLWO1tQGspC2ForXPlRWvzcVg", // change TOKEN with your bot token
+  token: "OTMwNjg1MzMyNTcwMTMyNTIx.Yd5eQg.6eugKexOUNZrDWGvGjdsMeomhaI", // change TOKEN with your bot token
   prefix: ["$getServerVar[prefix]", "<@!$clientID>", "<@$clientID>"]
 });
 
@@ -35,18 +35,6 @@ bot.interactionCommand({
 });
 
 bot.onInteractionCreate();
-
-bot.joinCommand({ 
-        channel: "922112212263374938", 
-        code: `**Hey <@$authorID>!, Welcome to $serverName! Please read the Rules in <#922112215644012605> and Enjoy**`
-})
-bot.onJoined()
-
-bot.leaveCommand({ 
-        channel: "922112213970452500", 
-        code: `**Goodbye $username, hope you had a Good Stay at $serverName**`
-})
-bot.onLeave()
 
 bot.command({
   name: "postmeme",
@@ -90,7 +78,7 @@ bot.command({
  })
 
 bot.variables({
-  prefix: "e+",
+  prefix: "e?",
   Money: "0",
   Bank: "0",
   Phone: "0",
@@ -107,7 +95,7 @@ bot.variables({
   Utm: "0",
   guess_the_number_channel: "0",
   winning_number: "0",
-  muted: "",
+  mutedrole: "",
   Rob: "false",
   ccmd: "",
   cdes: "",
