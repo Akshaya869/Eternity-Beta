@@ -1,6 +1,6 @@
   <br />
     <p>
-    <a href="https://dbd.leref.ga"><img src=" alt="dbd.js" /></a>
+    <a href="https://aoi.leref.ga"><img src=" alt="dbd.js" /></a>
   </p>
 
 # Multipurpose Discord Bot
