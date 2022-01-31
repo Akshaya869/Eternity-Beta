@@ -4,7 +4,7 @@ description: "Mutes a user for a period of time",
 category: "Moderation",
 usage: "e?mute <user>",
 code: `
-$giveRoles[Muted]
+$giveRoles[$mentioned[1];Muted]
 **Successfully Muted <@$mentioned[1]>
 **Reason-** \`$noMentionMessage\`
 $supressErrors[**$getVar[no]Error! Make sure Muted Role Exists**]
