@@ -25,10 +25,10 @@
 And more....!!
 
 ### Installation!
+      
+Clone the repository and then install all the dependencies in `package.json`
 
-Type `git-clone https://github.com/SupernovaBotDeveloper/dbd.jsMultipurposeBot`
-And clone the repository and then install all the dependencies in `package.json`
+Then type `node index.js` in the console!
+      
+Supports Repl.It
 
-Once doing that,you're free to run the bot!
-
-### Credits to Baeriri & Me for the code, some codes are of leaf
