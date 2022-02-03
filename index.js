@@ -139,6 +139,10 @@ giveawayparticipants: "",
 giveawayisfinished: "false",
 giveawayisgiveaway: "false",
 no: "<a:wrong:923190535978623046>",
+clinetid: "",
+ userid: "",
+ prefixadd: "",
+ used: "0",
 });
 
 bot.loadCommands("./commands/");
