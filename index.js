@@ -108,6 +108,7 @@ giveawayparticipants: "",
 giveawayisfinished: "false",
 giveawayisgiveaway: "false",
 no: "<a:wrong:923190535978623046>",
+bot: "false"
 });
 
 bot.loadCommands("./commands/");
