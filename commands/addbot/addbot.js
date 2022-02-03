@@ -7,10 +7,10 @@ module.exports = ({
    $setMessageVar[userid;$authorID;$messageID]
    $setMessageVar[clinetid;$message[1];$messageID]
    $setMessageVar[prefixadd;$message[2];$messageID] 
-   $argsCheck[>2; :x: Make sure it has the id and prefix ex. \`-addbot $clientID -\`]
+   $argsCheck[>2; :x: Make sure it has the id and prefix ex. \`e?addbot $clientID d?\`]
    $onlyIf[$isBot[$findUser[$message[1]]]==true; :x: Please list the id of a BOT! ]
    $onlyIf[$memberExists[$message[1]]!=true; **Hey**! This bot is already here! you can use it the testing channels.]]
    $suppressErrors[A extreme error just happened...]
-   $onlyForChannels[806955933745414194;Go to <#806955933745414194> to do this...]
+   $onlyForChannels[938752082167627786;Go to <#938752082167627786> to do this...]
    `
    })
