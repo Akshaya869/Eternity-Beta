@@ -6,5 +6,7 @@ $onlyIf[$getGlobalUserVar[Money;$authorID]>=$multi[3000;$message[1]];You Need �
 $thumbnail[$authorAvatar]
 $color[RANDOM]
 $title[Purchase Successful]
-$description[You Bought **$message[1] $customEmoji[gem]Bronze Lootbox** for **⏣$numberseparator[$multi[3000;$message[1]]]**!]`
+$description[You Bought **$message[1] $customEmoji[gem]Bronze Lootbox** for **⏣$numberseparator[$multi[3000;$message[1]]]**!]
+$onlyIf[$message[1]==$isNumber;**Enter a Number!**]
+$argsCheck[1;**Error**]`
 })
