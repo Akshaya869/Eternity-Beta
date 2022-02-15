@@ -16,11 +16,8 @@ module.exports = {
 **$customemoji[filters]Filters (Music Filters)**
 \`3d,bass,china,chipmunk,dance,darthvader,doubletime,earrape,equalizer,nightcore,pitch,pop,rate,reset,slowmotion,soft,speed,superbass,treblebass,tremolo,vaporwave,vibrate,vibrato\`
 
-**$customEmoji[info]Information**
-\`botinfo,channelinfo,devinfo,guildinfo,roleinfo,userinfo\`
-
 **$customEmoji[DGH_setting]Utility**
-\`addemoji,avatar,command,giveaway,help,invite,membercount,ping,poll,setprefix\`
+\`addemoji,avatar,command,giveaway,help,invite,membercount,ping,poll,setprefix,botinfo,channelinfo,devinfo,guildinfo,roleinfo,userinfo\`
 
 **$customEmoji[DGH_fun]Fun**
 \`8ball,gtn (Guess the Correct Number),hack,howgay,kill\`

@@ -7,5 +7,6 @@ $onlyIf[$getGlobalUserVar[Money;$authorID]>=$multi[50000000;$message[1]];You Nee
 $thumbnail[$authorAvatar]
 $color[RANDOM]
 $title[Purchase Successful]
-$description[You Bought **$message[1] $customEmoji[SpTro]Space Trophy** for **⏣$numberseparator[$multi[50000000;$message[1]]]**!]`
+$description[You Bought **$message[1] $customEmoji[SpTro]Space Trophy** for **⏣$numberseparator[$multi[50000000;$message[1]]]**!]
+$argsCheck[1;**$getVar[no]Error,You must mention how much you want to buy!**]`
 })
