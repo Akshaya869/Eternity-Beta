@@ -17,25 +17,6 @@ bot.status({
   time: 75 // amount of times where you can change the bot status (if have multiple statuses)
 });
 
-// FOR STREAMING STATUS USE THIS
-// bot.status({
-// text: "text",
-// type: "STREAMING",
-// url: "enter url/link"
-//   })
-// remove `//` in each side
-
-bot.command({
-  name: "lol",
-  code: `$createSlashCommand[$guildID;inviteme;Invite Me]`
-});
-bot.interactionCommand({
-  name: "inviteme",
-  code: `$interactionReply[$getBotInvite]`
-});
-
-bot.onInteractionCreate();
-
 bot.command({
   name: "postmeme",
   aliases: ["pm","post"],
@@ -56,7 +37,7 @@ bot.command({
   name:"p",
   code:`
   $title[$username GG! (Political Joke)]
-  $description[$randomText[Omg! u got;Noice u got] 💰 $random[0;1000]. Nice joke meme !]
+  $description[$randomText[Omg! u got;Noice u got] 💰 $random[0;1000]. Your fan following is increased by **$random[10;60]%** !]
   $setGlobalUserVar[Money;$sum[$getGlobalUserVar[Money];$random[0;1000]]]
   `
  })
@@ -64,7 +45,7 @@ bot.command({
   name:"r",
   code:`
   $title[$username GG! (Roast)]
-  $description[$randomText[Omg! u got;Noice u got] 💰 $random[0;1050]. Nice Roast meme !]
+  $description[$randomText[Omg! u got;Noice u got] 💰 $random[0;1050]. Roasted! 🔥 !]
   $setGlobalUserVar[Money;$sum[$getGlobalUserVar[Money];$random[0;1000]]]
   `
  })
@@ -72,10 +53,24 @@ bot.command({
   name:"m",
   code:`
   $title[$username GG!]
-  $description[$randomText[Omg! u got;Noice u got] 💰 $random[0;1100]. Nice meme u got thare !]
+  $description[$randomText[Omg! u got;Noice u got] 💰 $random[0;1100]. Nice meme $username !]
   $setGlobalUserVar[Money;$sum[$getGlobalUserVar[Money];$random[0;1000]]]
   `
  })
+
+ bot.awaitedCommand({
+  name: "ccn",
+  code: `Please write the reply for the custom command!
+ $setServerVar[cc$message[1]n;$messageSlice[1]]
+ $setServerVar[wcc;$message[1]]
+ $awaitMessages[$authorID;5m;everything;ccr;Command timed out!]
+ $onlyIf[$message[1]<=3;The custom command can only be maximum 3 according to the settings of the bot!]`}) 
+ 
+ bot.awaitedCommand({
+  name: "ccr",
+  code: `Successfully set the custom command. The name is \`$getServerVar[cc$getServerVar[wcc]n]\`, the reply being \`$getServerVar[cc$getServerVar[wcc]r]\`
+ $setServerVar[cc$getServerVar[wcc]r;$message]`})
+ 
 
 bot.variables({
   prefix: "e?",
@@ -108,7 +103,14 @@ giveawayparticipants: "",
 giveawayisfinished: "false",
 giveawayisgiveaway: "false",
 no: "<a:wrong:923190535978623046>",
-bot: "false"
+bot: "false",
+wcc:"",
+cc1n:"",
+cc1r:"",
+cc2n:"",
+cc2r:"",
+cc3n:"",
+cc3r:"",
 });
 
 bot.loadCommands("./commands/");
