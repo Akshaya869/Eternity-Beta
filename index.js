@@ -68,7 +68,7 @@ bot.command({
  
  bot.awaitedCommand({
   name: "ccr",
-  code: `Successfully set the custom command. The name is \`$getServerVar[cc$getServerVar[wcc]n]\`, the reply being \`$getServerVar[cc$getServerVar[wcc]r]\`
+  code: `Successfully set the custom command. The name is \`$getServerVar[$getServerVar[wcc]]\`, the reply being \`$getServerVar[$getServerVar[wcc]]\`
  $setServerVar[cc$getServerVar[wcc]r;$message]`})
  
 
