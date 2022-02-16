@@ -57,19 +57,6 @@ bot.command({
   $setGlobalUserVar[Money;$sum[$getGlobalUserVar[Money];$random[0;1000]]]
   `
  })
-
- bot.awaitedCommand({
-  name: "ccn",
-  code: `Please write the reply for the custom command!
- $setServerVar[cc$message[1]n;$messageSlice[1]]
- $setServerVar[wcc;$message[1]]
- $awaitMessages[$authorID;5m;everything;ccr;Command timed out!]
- $onlyIf[$message[1]<=3;The custom command can only be maximum 3 according to the settings of the bot!]`}) 
- 
- bot.awaitedCommand({
-  name: "ccr",
-  code: `Successfully set the custom command. The name is \`$getServerVar[$getServerVar[wcc]]\`, the reply being \`$getServerVar[$getServerVar[wcc]]\`
- $setServerVar[cc$getServerVar[wcc]r;$message]`})
  
 
 bot.variables({

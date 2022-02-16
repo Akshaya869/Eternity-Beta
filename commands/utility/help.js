@@ -5,7 +5,7 @@ module.exports = {
   $title[Command List]
   $description[
 **$customEmoji[Money]Economy**
-\`award,balance,beg,buy,daily,postmeme,deposit,inventory,leaderboard,shop,steal,use,withdraw,work,weekly,monthly,shopreward\`
+\`award,balance,beg,buy,daily,postmeme,deposit,inventory,leaderboard,shop,steal,use,withdraw,work,weekly⭐,monthly⭐,shopreward⭐\`
 
 **$customEmoji[Mod]Moderation**
 \`ban,giverole,kick,mute,nuke,purge,removerole,setmute,tempmute,temprole,unban,unmute\`
@@ -20,13 +20,10 @@ module.exports = {
 \`addemoji,avatar,command,giveaway,help,invite,membercount,ping,poll,setprefix,botinfo,channelinfo,devinfo,guildinfo,roleinfo,userinfo\`
 
 **$customEmoji[DGH_fun]Fun**
-\`8ball,gtn (Guess the Correct Number),hack,howgay,kill,rickroll\`
+\`8ball,gtn (Guess the Correct Number),hack,howgay,kill,rickroll⭐\`
 
 **$customEmoji[developers]Developer Only**
 \`eval,reset,serverlist,give-premium,remove-premium,award\` 
-
-**$customEmoji[gem]Premium**
-\`weekly,monthly,rickroll,shopreward\`
 ]
 $footer[Do e?command <cmd> for more information]
 $color[RANDOM]`
