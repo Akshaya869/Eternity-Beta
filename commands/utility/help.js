@@ -8,7 +8,7 @@ module.exports = {
 \`award,balance,beg,buy,daily,postmeme,deposit,inventory,leaderboard,shop,steal,use,withdraw,work,weekly⭐,monthly⭐,shopreward⭐\`
 
 **$customEmoji[Mod]Moderation**
-\`ban,giverole,kick,mute,nuke,purge,removerole,setmute,tempmute,temprole,unban,unmute\`
+\`ban,giverole,kick,mute,nuke,purge,removerole,setmute,unban,lock,unlock,slowmode\`
 
 **$customemoji[Musique]Music**
 \`247,clear,forward,join,leave,loop,loopall,nowplaying,pause,play,queue,replay,resume,rewind,search,seek,shuffle,skip,skipto,volume\`
@@ -20,7 +20,7 @@ module.exports = {
 \`addemoji,avatar,command,giveaway,help,invite,membercount,ping,poll,setprefix,botinfo,channelinfo,devinfo,guildinfo,roleinfo,userinfo\`
 
 **$customEmoji[DGH_fun]Fun**
-\`8ball,gtn (Guess the Correct Number),hack,howgay,kill,rickroll⭐\`
+\`8ball,gtn (Guess the Correct Number),hack,howgay,kill,snipe,rickroll⭐\`
 
 **$customEmoji[developers]Developer Only**
 \`eval,reset,serverlist,give-premium,remove-premium,award\` 
