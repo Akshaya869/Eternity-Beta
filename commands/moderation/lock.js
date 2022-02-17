@@ -4,7 +4,7 @@ module.exports = ({
     description: "Locks the specified channel or will lock the current channel.",
     category: "Moderation",
     code: `$modifyChannelPerms[$get[chan];-sendmessages;$guildID]
-    Successfully locked <#$get[chan]>!!
+    $description[**$getVar[yes]Successfully locked <#$get[chan]>!**]
     $onlyIf[$get[chan]!=undefined;**⛔ Please specify a valid channel!!**]
     $let[chan;$replaceText[$replaceText[$checkCondition[$message==];true;$channelID];false;$findServerChannel[$message;no]]]
     $onlyPerms[managechannels;**⛔ You dont have required perms to do it!!**]
