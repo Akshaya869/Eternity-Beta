@@ -4,5 +4,5 @@ module.exports = ({
     category: "Moderation",
     usage: "e?setmute @role",
     code:`$setServerVar[mutedrole;$mentionedRoles[1]]
-    Successfully set muted role to <@&$mentionedRoles[1]>`
+    $description[**$getVar[yes]Successfully set muted role to <@&$mentionedRoles[1]>**]`
     })
