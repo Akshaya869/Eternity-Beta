@@ -58,6 +58,28 @@ bot.command({
   `
  })
  
+ bot.deletedCommand({
+  channel:"$channelID",
+  code:`$settimeout[1h;
+  guild: $guildid] $djseval[//This is needed because it is against ToS to store the snipe data forever. Thats why I kept a timeout to remove it after an hour]
+  $setServerVar[snipe_messages;&&&&$replacetext[$message;&&&&;&&&]$getServerVar[snipe_messages]]
+  $setServerVar[snipe_author;&&&&$authorid$getServerVar[snipe_author]]
+  $setServerVar[snipe_datestamp;&&&&$advancedtextsplit[$divide[$datestamp;1000];.;1]$getServerVar[snipe_datestamp]]`})
+  bot.onMessageDelete()
+
+  bot.timeoutCommand({
+  channel:"",
+  code:`$setservervar[snipe_datestamp;$joinsplittext[&&&&];$get[guildid]]
+  $removetextsplitelement[$gettextsplitlength]
+  $textsplit[$getservervar[snipe_datestamp;$get[guildid]];&&&&]
+  $setservervar[snipe_author;$joinsplittext[&&&&];$get[guildid]]
+  $removetextsplitelement[$gettextsplitlength]
+  $textsplit[$getservervar[snipe_author;$get[guildid]];&&&&]
+  $setservervar[snipe_messages;$joinsplittext[&&&&];$get[guildid]]
+  $removetextsplitelement[$gettextsplitlength]
+  $textsplit[$getservervar[snipe_messages;$get[guildid]];&&&&]
+  $let[guildid;$timeoutdata[guild]]`})
+
 
 bot.variables({
   prefix: "e?",
@@ -92,13 +114,11 @@ giveawayisgiveaway: "false",
 no: "<a:wrong:923190535978623046>",
 yes: "<a:correct:923190540672049154>",
 bot: "false",
-wcc:"",
-cc1n:"",
-cc1r:"",
-cc2n:"",
-cc2r:"",
-cc3n:"",
-cc3r:"",
+lock: "false",
+snipe_messages:"",
+snipe_author:"",
+snipe_datestamp:"",
+mutedrole: "",
 });
 
 bot.loadCommands("./commands/");
