@@ -13,6 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "aoi.js": "^4.6.0",
+    "node-json-db": "^1.1.0",
+    "read-file": "^0.2.0",
     "ytdl-core": "^4.10.0"
   }
 }
