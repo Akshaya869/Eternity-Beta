@@ -1,16 +1,15 @@
 module.exports = {
     name: "warn",
     code: `
-    $title[Moderation | Warns]
-$footer[System32(cow) do it L]
-$description[You warned <@​$findUser[$message[1];no]> for$replaceText[$message;$message[1];] using the id #$getServerVar[warn]]
-$color[GREEN]
-$djsEval[const nodejsondb = require("node-json-db").JsonDB;
+    $title[$username[$mentioned[1]] was Warned]
+    $description[
+    **User-** <@$mentioned[1]>
 
-var db = new nodejsondb("warns", true, true, '/');
+    **Moderator-** <@$authorID>
 
-db.push("/$findUser[$message[1];no]/$getServerVar[warn]", {"reason":"$replaceText[$message;$message[1];]","mod":"$username", "id":"$getServerVar[warn]"});]
-$setServerVar[warn;$sum[$getServerVar[warn];1]]
-$onlyIf[$findUser[$message[1];no]!=undefined;User not found]
-$argsCheck[>2;Args missing]`
+    **Reason-** \`$noMentionMessage\`]
+
+    $setUserVar[warns;$sum[$getUserVar[warns;$mentioned[1]];1];$mentioned[1]]
+    $onlyPerms[kick;ban;**$getVar[no] You don't have Enough Perms to use this Command**]
+    `
 }

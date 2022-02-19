@@ -1,29 +1,11 @@
 module.exports = {
     name: "unwarn",
+    aliases: "removewarn",
     code: `
-    $sendMessage[{title: Moderation | Unwarn}{description:You just removed the warns from <@​$mentioned[1]>}{color:GREEN};no]
-
-$djsEval[const nodejsondb = require("node-json-db").JsonDB;
-
-var db = new nodejsondb("warns", true, true, '/');
-
-db.delete("/$mentioned[1]");]
-
-$onlyIf[$noMentionMessage==all;]
-
-$if[$noMentionMessage!=all]
-
-$sendMessage[{title:Moderation | Unwarn}{description:you removed the warn #$noMentionMessage to <@​$mentioned[1]>}{color:GREEN};no]
-
-$djsEval[const nodejsondb = require("node-json-db").JsonDB;
-
-var db = new nodejsondb("warns", true, true, '/');
-
-db.delete("/$mentioned[1]/$noMentionMessage");]
-
-$endif
-
-$onlyIf[$noMentionMessage!=;Type one warn id or all to remove warns]
-
-$onlyIf[$mentioned[1]!=;Mention someone]`
+    $title[Removed Warning]
+    $description[$getVar[yes] Successfully Removed \`1 Warning\` from $username[$mentioned[1]]]
+    $setUserVar[warns;$sub[$getUserVar[warns;$mentioned[1]];1];$mentioned[1]]
+    $onlyIf[$getUserVar[warns;$mentioned[1]]>0;**$getVar[no] This user has no Warnings!**]
+    $onlyPerms[kick;ban;**$getVar[no] You don't have Enough Perms to use this Command**]
+    `
 }

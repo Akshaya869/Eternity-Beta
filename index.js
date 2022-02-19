@@ -119,7 +119,7 @@ snipe_messages:"",
 snipe_author:"",
 snipe_datestamp:"",
 mutedrole: "",
-warn: "0",
+warns: "0"
 });
 
 bot.loadCommands("./commands/");
