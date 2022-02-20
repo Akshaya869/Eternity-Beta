@@ -2,10 +2,8 @@ module.exports = ({
     name:"nick",
     aliases:['set-nick','nickname'],
     category:"Moderation",
-    code:`$if[$serverchannelexists==true]
+    code:`
     $channelsendmessage[$getservervar[bl];{author:A user's nickname was updated!:$authoravatar}{description:<@$authorid> updated <@$get[user]>'s nickname, to **$get[name]**!\n\n[Jump To Message](https://discord.com/channels/$guildid/$channelid/$messageid)}{color:RANDOM}{footer:$username[$clientid] bot-mod logs}{timestamp}{thumbnail:$useravatar[$get[user]]}]
-    $else
-    $endif
     $changenickname[$get[user];$get[name]]
     $sendmessage[{author:Success!}{description:**$usertag[$get[user]]** was successfully renamed to **$get[name]**!}{color:GREEN}{footer:Action by $usertag}{timestamp};no]
     $onlybotperms[managenicknames;embedlinks;Permissions I require the given permissions for the execution of this command#COLON# \`Kick\`, \`Embed Links\`. Permissions not granted, execution cancelled.]
