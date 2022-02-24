@@ -4,7 +4,7 @@ module.exports = ({
     category: "Moderation",
     usage: "e?mute <user> <time> <reason>",
     code: `
-    $sendDM[$mentioned[1];{description:**Your mute time has finished in $serverName[$guildID]}{color:BLUE}**]
+    $sendDM[$mentioned[1];{description:**Your mute time has finished in $serverName[$guildID]**}{color:BLUE}]
     $takeRoles[$mentioned[1];$getServerVar[mutedrole]]
     $wait[$message[2]]
     $channelSendMessage[$channelID;{title:Muted}{description:$customemoji[MutedXD]Muted <@$mentioned[1]> for $message[2]}{color:GREEN}]

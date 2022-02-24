@@ -7,5 +7,6 @@ module.exports = {
     $setUserVar[warns;$sub[$getUserVar[warns;$mentioned[1]];1];$mentioned[1]]
     $onlyIf[$getUserVar[warns;$mentioned[1]]>0;**$getVar[no] This user has no Warnings!**]
     $onlyPerms[kick;ban;**$getVar[no] You don't have Enough Perms to use this Command**]
+    $color[GREEN]
     `
 }
