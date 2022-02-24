@@ -15,7 +15,7 @@ module.exports = ({
     $addField[Users;$allMembersCount]
     $addField[Channels;$allChannelsCount]
     $addField[Servers;$serverCount]
-    $addField[Version;1.3]
+    $addField[Version;1.4]
     $addField[Beta Version;1.4]
     $addField[Created;$creationDate[$clientID]]
     $addField[Developer;$userTag[$botOwnerID]]
