@@ -6,7 +6,9 @@ module.exports = {
   $description[
 \`\`\`
 Developer- $username[$botOwnerId]
+
 Bot Version- 1.4.0
+
 Support Server- https://discord.gg/7Gm6FeZFux
 \`\`\`
 
