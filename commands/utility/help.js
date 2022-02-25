@@ -2,8 +2,14 @@ module.exports = {
   name: "help",
   description: "Command List",
   code: `
-  $title[Command List]
+  $title[Help]
   $description[
+\`\`\`
+Developer- $username[$botOwnerId]
+Bot Version- 1.4.0
+Support Server- https://discord.gg/7Gm6FeZFux
+\`\`\`
+
 **$customEmoji[Money]Economy**
 \`award,balance,beg,buy,daily,postmeme,deposit,inventory,leaderboard,shop,steal,use,withdraw,work,weekly⭐,monthly⭐,shopreward⭐\`
 
