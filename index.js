@@ -119,7 +119,10 @@ snipe_messages:"",
 snipe_author:"",
 snipe_datestamp:"",
 mutedrole: "",
-warns: "0"
+warns: "0",
+welcomeChannel: "",
+welcomeMsg: "{user.ping} Welcome to the server",
+welcomeBg: "https://cdn.discordapp.com/attachments/850033801581297755/863810314135011338/blob-scene-haikei.png"
 });
 
 bot.loadCommands("./commands/");
