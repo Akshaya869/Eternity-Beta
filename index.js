@@ -122,7 +122,9 @@ mutedrole: "",
 warns: "0",
 welcomeChannel: "",
 welcomeMsg: "{user.ping} Welcome to the server",
-welcomeBg: "https://cdn.discordapp.com/attachments/850033801581297755/863810314135011338/blob-scene-haikei.png"
+welcomeBg: "https://cdn.discordapp.com/attachments/850033801581297755/863810314135011338/blob-scene-haikei.png",
+AFK: "off",
+time: "",
 });
 
 bot.loadCommands("./commands/");
