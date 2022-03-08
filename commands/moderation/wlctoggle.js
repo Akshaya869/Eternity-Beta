@@ -1,5 +1,5 @@
 module.exports = {
-    name: "toggle-wlc",
+    name: "toggle-welcome",
     code: `$if[$message[1]==enable]
     $description[**$getVar[yes] Successfully Enabled Welcome System]
     $setServerVar[wlcToggle;true]
