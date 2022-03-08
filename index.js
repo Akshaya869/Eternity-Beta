@@ -80,23 +80,13 @@ bot.command({
   $textsplit[$getservervar[snipe_messages;$get[guildid]];&&&&]
   $let[guildid;$timeoutdata[guild]]`})
 
-  bot.reactionAddCommand({
-    channel: "$channelid", 
-    code:`$sendDm[$authorID;{author:Role given!:$useravatar[$clientid]}{description:You successfully got the role by reacting to 👍 in $servername!}{footer:Yay!}{color:GREEN}]
-    $giverole[$authorid;$getservervar[rrr]]
-    $onlyif[$emojitostring==👍;]
-    $onlyif[$getservervar[rrr]!=;]
-    $onlyif[$messageID==$getservervar[rrmid];]`})
-    bot.onReactionAdd()
-    bot.reactionRemoveCommand({
-    channel: "$channelid", 
-    code:`$sendDm[$authorID;{author:Role taken!:$useravatar[$clientid]}{description:You successfully removed the role by reacting to 👍 in $servername!}{footer:#COLON#D}{color:GREEN}]
-    $takerole[$authorid;$getservervar[rrr]]
-    $onlyif[$emojitostring==👍;]
-    $onlyif[$getservervar[rrr]!=;]
-    $onlyif[$messageID==$getservervar[rrmid];]`})
-    bot.onReactionRemove()
+  bot.joinCommand({ //command
+    channel: "$getServerVar[wlcChannel]", //channel where it will log
+    code: `**Hey <@$username>,Welcome to $serverName,Hope you have a Great Time Here!**
+    $onlyIf[$getServerVar[wlcToggle]==true;]` //Message sent to <channel>
+    })
 
+ bot.onJoined()
 
 bot.variables({
   prefix: "e?",
@@ -137,13 +127,10 @@ snipe_author:"",
 snipe_datestamp:"",
 mutedrole: "",
 warns: "0",
-welcomeChannel: "",
-welcomeMsg: "{user.ping} Welcome to the server",
-welcomeBg: "https://cdn.discordapp.com/attachments/850033801581297755/863810314135011338/blob-scene-haikei.png",
 AFK: "off",
 time: "",
-rrr: "",
-rrmid: ""
+wlcChannel: "",
+wlcToggle: "False",
 });
 
 bot.loadCommands("./commands/");
