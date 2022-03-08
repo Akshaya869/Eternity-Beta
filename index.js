@@ -80,6 +80,23 @@ bot.command({
   $textsplit[$getservervar[snipe_messages;$get[guildid]];&&&&]
   $let[guildid;$timeoutdata[guild]]`})
 
+  bot.reactionAddCommand({
+    channel: "$channelid", 
+    code:`$sendDm[$authorID;{author:Role given!:$useravatar[$clientid]}{description:You successfully got the role by reacting to 👍 in $servername!}{footer:Yay!}{color:GREEN}]
+    $giverole[$authorid;$getservervar[rrr]]
+    $onlyif[$emojitostring==👍;]
+    $onlyif[$getservervar[rrr]!=;]
+    $onlyif[$messageID==$getservervar[rrmid];]`})
+    bot.onReactionAdd()
+    bot.reactionRemoveCommand({
+    channel: "$channelid", 
+    code:`$sendDm[$authorID;{author:Role taken!:$useravatar[$clientid]}{description:You successfully removed the role by reacting to 👍 in $servername!}{footer:#COLON#D}{color:GREEN}]
+    $takerole[$authorid;$getservervar[rrr]]
+    $onlyif[$emojitostring==👍;]
+    $onlyif[$getservervar[rrr]!=;]
+    $onlyif[$messageID==$getservervar[rrmid];]`})
+    bot.onReactionRemove()
+
 
 bot.variables({
   prefix: "e?",
@@ -125,6 +142,8 @@ welcomeMsg: "{user.ping} Welcome to the server",
 welcomeBg: "https://cdn.discordapp.com/attachments/850033801581297755/863810314135011338/blob-scene-haikei.png",
 AFK: "off",
 time: "",
+rrr: "",
+rrmid: ""
 });
 
 bot.loadCommands("./commands/");
