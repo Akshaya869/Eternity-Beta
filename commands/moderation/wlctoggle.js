@@ -10,10 +10,5 @@ module.exports = {
     $setServerVar[wlcToggle;false]
     $onlyIf[$getServerVar[wlcToggle]==true;**$getVar[no]Welcome System is already disabled**]
     $endif
-    $if[$message[1]==]
-   **Listen Mate you have 2 fields**
-    \`e?toggle-welcome enable (to enable welcome)\`
-                      or
-    \`e?toggle-welcome disable (to disable welcome)\`
     `
 }
