@@ -7,5 +7,7 @@ module.exports = {
    $color[GREEN]
    $onlyPerms[manageroles;ban;kick;**$getvar[no]You don't have enough permissions to use this command**]
    $setServerVar[wlcChannel;$message[1]]
+   $onlyIf[$getServerVar[wlcToggle]==true;**$getVar[no]Enable Welcome System before running this command**
+   \`e?toggle-welcome enable\`]
    `
 }
